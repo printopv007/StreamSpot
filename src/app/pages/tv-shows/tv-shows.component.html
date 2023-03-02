@@ -1,0 +1,30 @@
+ <div style="background-image: url('/assets/images/bg.jpg');  " class="container-fluid">
+  <h1 style="color: aliceblue; text-align: center;margin-top: 30px;">Top Series</h1>
+  <div class="row row">
+    <div class="col cols-4" *ngFor="let item of database">
+<br>
+      <div style="margin-left: 10px;" class="wrapper">
+        <div class="card front-face">
+          <img src="{{item.original}}" alt="Flip Card">
+     
+        </div>
+        <div class="card back-face">
+          <img src="{{item.medium}}" alt="Flip Card">
+          <div class="info">
+            <div class="title">{{item.name}}</div>
+            Rating:{{item.rating.average}}/10
+
+            <p>Language:{{item.language}} <br>Genre:{{item.genres}}</p>Premiered:{{item.premiered}}
+            <br> Ended:{{item.ended}} <br> Status:{{item.status}}
+            
+            
+          </div>
+          <a (click)="gotoHere(item.name)"><button type="button" class="btn btn-outline-info">See Details</button></a>.
+         
+        </div>
+        
+      </div>
+    </div>
+    </div>
+  </div> 
+  <app-footer></app-footer>

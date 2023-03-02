@@ -1,0 +1,17 @@
+ <div class="main">
+    <div style="margin-top: 10px;color: aliceblue;font-family:MyFont;" class="container text-center">
+        <h2>{{single[0].name}}</h2>
+        <h5>{{single[0].genres}}</h5>
+        <h5>Rating:{{single[0].rating.average}}⭐</h5>
+        <img style="width: 400px;height: 500px; border-radius: 20px; "src="{{single[0].original}}" class="img-fluid" alt="...">        
+
+        <h4 style="margin-top: 20px;float: right;"> {{single[0].summary}} </h4><br>
+        <p>Premiered: {{single[0].premiered}} <br>
+              Ended: {{single[0].ended}} <br>
+              Status:{{single[0].status}} <br>
+               Schedule: {{single[0].schedule.days}} at {{single[0].schedule.time}}</p>
+ <a href="{{single[0].officialSite}}" ><button type="button" class="btn btn-outline-info">Visit Official Website</button></a>
+ 
+    </div>
+ </div>
+ 
