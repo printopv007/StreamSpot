@@ -10,6 +10,11 @@ import { NavbarComponent } from './utils/navbar/navbar.component';
 import { SingleshowComponent } from './pages/singleshow/singleshow.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './utils/footer/footer.component';
+import { SoonComponent } from './utils/soon/soon.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,12 +23,16 @@ import { FooterComponent } from './utils/footer/footer.component';
     TvShowsComponent,
     NavbarComponent,
     SingleshowComponent,
-    FooterComponent
+    FooterComponent,
+    SoonComponent
     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,   
+    BrowserAnimationsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),   
   ],
   providers: [],
   bootstrap: [AppComponent]

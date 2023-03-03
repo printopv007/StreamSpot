@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mini-project-420d5": {
+      "hosting": {
+        "Mini_Project": [
+          "mini-project-420d5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mini-project-420d5"
+  }
+}

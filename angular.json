@@ -95,8 +95,16 @@
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
-            
-            
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Mini_Project:build:production",
+            "firebaseProject": "mini-project-420d5",
+            "firebaseHostingSite": "mini-project-420d5"
           }
         }
       }
