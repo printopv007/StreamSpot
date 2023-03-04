@@ -17,8 +17,8 @@ section {
 .footer-distributed{
 	/* background: rgb(107, 107, 107); */
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-	background-color: #000000;
-	box-sizing: border-box;
+	background-color: #353535;
+	box-sizing: border-box ;
 	width: 100%;
 	text-align: left;
 	font: bold 16px ;
