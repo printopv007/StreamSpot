@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-
+  
 }
+
+

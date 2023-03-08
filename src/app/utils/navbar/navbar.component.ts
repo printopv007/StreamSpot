@@ -8,8 +8,5 @@ import { database } from 'src/assets/data';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  filteredMovies: any;
   constructor(private show:ShowserviceService){}
-
-
 }

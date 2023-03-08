@@ -11,10 +11,13 @@ import { SingleshowComponent } from './pages/singleshow/singleshow.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './utils/footer/footer.component';
 import { SoonComponent } from './utils/soon/soon.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { FormsModule } from '@angular/forms'; // for template-driven forms
+import { ReactiveFormsModule } from '@angular/forms';
+import { ActionComponent } from './category/action/action.component';
+import { ComedyComponent } from './category/comedy/comedy.component';
+import { DramaComponent } from './category/drama/drama.component'; // for reactive forms
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,17 +27,19 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     NavbarComponent,
     SingleshowComponent,
     FooterComponent,
-    SoonComponent
+    SoonComponent,
+    ActionComponent,
+    ComedyComponent,
+    DramaComponent,
+    
     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),   
+    FormsModule,
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

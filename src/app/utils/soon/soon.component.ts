@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ApiService } from 'src/app/api.service';
+import { ShowserviceService } from 'src/app/showservice.service';
+
 
 @Component({
   selector: 'app-soon',
@@ -6,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./soon.component.css']
 })
 export class SoonComponent {
-
+  
+ 
 }
+
