@@ -1,21 +1,15 @@
-/* .left{
-    width: 50%;
-    height: 100%;
-    float: left;
-    text-align: center;
-    padding-right: 150px;
-    margin-top: 50px;
+
+.main{
+  margin:40px;
+  margin-left: 65px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  font-family: 'MyFont';
+  width: 90%;
+  height: 100%;
 }
-.right{
-    background-color: rgb(106, 106, 106);
-    border-radius: 10px;
-    opacity: 100%;
-    width: 50%;
-    height: 100%;
-    float: right;
-    margin-top: 50px;
-    padding-right: 150px;
-    text-align: center;
-
-} */
-
+.main .right{
+  width: 50%;
+  height: 50%;
+  float: right;
+}

@@ -16,8 +16,16 @@ import { FormsModule } from '@angular/forms'; // for template-driven forms
 import { ReactiveFormsModule } from '@angular/forms';
 import { ActionComponent } from './category/action/action.component';
 import { ComedyComponent } from './category/comedy/comedy.component';
-import { DramaComponent } from './category/drama/drama.component'; // for reactive forms
-
+import { DramaComponent } from './category/drama/drama.component';
+import { ScifiComponent } from './category/scifi/scifi.component';
+import { HorrorComponent } from './category/horror/horror.component';
+import { RomanceComponent } from './category/romance/romance.component';
+import { ThrillerComponent } from './category/thriller/thriller.component';
+import { MysteryComponent } from './category/mystery/mystery.component';
+import { CrimeComponent } from './category/crime/crime.component';
+import { AdventureComponent } from './category/adventure/adventure.component';
+import { FantasyComponent } from './category/fantasy/fantasy.component';
+import { AnimationComponent } from './category/animation/animation.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +39,15 @@ import { DramaComponent } from './category/drama/drama.component'; // for reacti
     ActionComponent,
     ComedyComponent,
     DramaComponent,
-    
+    ScifiComponent,
+    HorrorComponent,
+    RomanceComponent,
+    ThrillerComponent,
+    MysteryComponent,
+    CrimeComponent,
+    AdventureComponent,
+    FantasyComponent,
+    AnimationComponent,    
     ],
   imports: [
     BrowserModule,
