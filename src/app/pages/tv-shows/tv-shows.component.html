@@ -1,4 +1,5 @@
 <h1 style="color: aliceblue; text-align: center;margin-top: 30px;">Stream Spot and Chill!</h1>
+
 <div id="container-fluid">
   <div id="monitor">
     <div  id="monitorscreen">
@@ -30,10 +31,9 @@
             <div class="title">{{item.name}}</div>
             Rating:{{item.rating.average}}/10
 
-            <p>Language:{{item.language}} <br>Genre:{{item.genres}}</p>Premiered:{{item.premiered}}
-            <br> Ended:{{item.ended}} <br> Status:{{item.status}}            
+            <p>Language:{{item.language}} <br>Genre:{{item.genres}}</p> Status:{{item.status}}            
           </div>
-          <a (click)="gotoHere(item.name)"><button type="button" class="btn btn-outline-info">See Details</button></a>.
+          <a (click)="gotoHere(item.name)"><button type="button" class="btn btn-outline-info">See Details</button></a>
          
         </div>
         

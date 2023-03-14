@@ -9,4 +9,7 @@ import { database } from 'src/assets/data';
 })
 export class NavbarComponent {
   constructor(private show:ShowserviceService){}
+data=this.show.getData();
+  
+
 }

@@ -1,15 +1,10 @@
-
-.main{
-  margin:40px;
-  margin-left: 65px;
-  background-color: aliceblue;
-  border-radius: 20px;
+*{
+  color: white;
   font-family: 'MyFont';
-  width: 90%;
-  height: 100%;
 }
-.main .right{
-  width: 50%;
-  height: 50%;
-  float: right;
+h2{
+  text-align: center;
+}
+h5{
+  text-align: center;
 }

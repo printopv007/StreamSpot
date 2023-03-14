@@ -4,8 +4,6 @@ import { database } from 'src/assets/data';
   providedIn: 'root'
 })
 export class ShowserviceService {
-  queryParams: any;
-  series: any;
   constructor() {}
   getData(){
     return database
@@ -13,7 +11,6 @@ export class ShowserviceService {
   getSingle(id:any){
     return database[id]
   }
-  getGenres(genres:any){
-  return database[genres]
-  }
+ 
+ 
 }

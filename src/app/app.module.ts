@@ -11,7 +11,7 @@ import { SingleshowComponent } from './pages/singleshow/singleshow.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './utils/footer/footer.component';
 import { SoonComponent } from './utils/soon/soon.component';
-import { FormsModule } from '@angular/forms'; // for template-driven forms
+import { FormsModule } from '@angular/forms'; 
 import { ActionComponent } from './category/action/action.component';
 import { ComedyComponent } from './category/comedy/comedy.component';
 import { DramaComponent } from './category/drama/drama.component';
@@ -24,6 +24,7 @@ import { CrimeComponent } from './category/crime/crime.component';
 import { AdventureComponent } from './category/adventure/adventure.component';
 import { FantasyComponent } from './category/fantasy/fantasy.component';
 import { AnimationComponent } from './category/animation/animation.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,9 @@ import { AnimationComponent } from './category/animation/animation.component';
     CrimeComponent,
     AdventureComponent,
     FantasyComponent,
-    AnimationComponent,    
+    AnimationComponent,
+  
+       
     ],
   imports: [
     BrowserModule,

@@ -8,7 +8,6 @@ import { database } from 'src/assets/data';
   styleUrls: ['./tv-shows.component.css']
 })
 export class TvShowsComponent {
-  
   constructor(private show :ShowserviceService,private router : Router){
   }
 database=this.show.getData();
