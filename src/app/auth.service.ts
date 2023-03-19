@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from '@angular/fire/auth';
 import { Firestore,collectionData, collection,addDoc } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
-
+import Swal from 'sweetalert2';
 @Injectable({
   providedIn: 'root'
 })
@@ -29,11 +29,20 @@ export class AuthService {
   login(creds: any) {
     signInWithEmailAndPassword(this.auth, creds.email, creds.password)
       .then(() => {
-        alert('Login Success')
+        Swal.fire(
+          'Login Success!',
+          'Welcome!',
+          'success'
+        )
         this.router.navigate(['/home'])
       })
       .catch((err) => {
-        alert(err.message)
+        Swal.fire({
+          icon: 'error',
+          title: 'Login Failed!',
+          text: (err.message),
+        })
+        // alert(err.message)
       })
   }
   
@@ -43,17 +52,31 @@ export class AuthService {
   
     createUserWithEmailAndPassword(this.auth, data.email, data.password)
       .then(() => {
-    alert('success')
+        Swal.fire(
+          'Registration Success!',
+          'Welcome',
+          'success'
+        )
     this.router.navigate(['/home'])
       })
       .catch((err) => {
-        alert(err.message)
+        Swal.fire({
+          icon: 'error',
+          title: 'Signup Failed!',
+          text: (err.message),
+        })
+        // alert(err.message)
       })
   }
   
   logout() {
       signOut(this.auth)
         .then(() => {
+          Swal.fire(
+            'Successfully Logged out!',
+            '',
+            'success'
+          )
           this.router.navigate([''])
         })
         .catch((err) => {
