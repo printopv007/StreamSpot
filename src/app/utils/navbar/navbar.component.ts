@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth.service';
 import { ShowserviceService } from 'src/app/showservice.service';
 import { database } from 'src/assets/data';
 @Component({
@@ -8,8 +9,10 @@ import { database } from 'src/assets/data';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  constructor(private show:ShowserviceService){}
+  constructor(private show:ShowserviceService,private auth:AuthService){}
 data=this.show.getData();
-  
+signout(){
+  this.auth.logout()
+}
 
 }

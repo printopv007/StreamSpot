@@ -4,17 +4,15 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" routerLink="home" >Stream<span>Spot</span></a>
+      <a class="navbar-brand" routerLink="/home" >Stream<span>Spot</span></a>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link btn-outline-info " aria-current="page" routerLink="home" >Home</a>
+          <a class="nav-link btn-outline-info " aria-current="page" routerLink="/home" >Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " routerLink="tvshows">TV-Series</a>
+          <a class="nav-link " routerLink="/tvshows">TV-Series</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login">Login</a>
-        </li>
+       
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Categories
@@ -35,6 +33,17 @@
             <li><a class="dropdown-item" routerLink="/fantasy">Fantasy</a></li>
           </div>        
           </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+        <ul class="dropdown-menu dropdown-menu">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login" (click)="signout()">Logout</a>
+        </li>
+        
+        </ul>
         </li>
       </ul>
       <form class="d-flex" role="search">

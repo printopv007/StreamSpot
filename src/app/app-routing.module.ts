@@ -16,7 +16,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SingleshowComponent } from './pages/singleshow/singleshow.component';
 import { TvShowsComponent } from './pages/tv-shows/tv-shows.component';
-import { SoonComponent } from './utils/soon/soon.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
 
@@ -37,9 +37,6 @@ const routes: Routes = [
     path:'single',component:SingleshowComponent
   },
    
-  {
-    path:'soon',component:SoonComponent
-  },
   {
     path:'drama',component:DramaComponent
   },
@@ -76,7 +73,10 @@ const routes: Routes = [
   },
   {
     path:'anime',component:AnimationComponent
-  }
+  },
+  {
+    path:'sign',component:SignupComponent
+  },
 
 ];
 
