@@ -57,7 +57,7 @@ export class AuthService {
           'Welcome',
           'success'
         )
-    this.router.navigate(['/home'])
+    this.router.navigate(['/login'])
       })
       .catch((err) => {
         Swal.fire({
