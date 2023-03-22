@@ -31,8 +31,9 @@ export class AuthService {
       .then(() => {
         Swal.fire(
           'Login Success!',
-          'Welcome!',
-          'success'
+          'Welcome to StreamSpot!',
+          'success',
+         
         )
         this.router.navigate(['/home'])
       })
@@ -54,7 +55,7 @@ export class AuthService {
       .then(() => {
         Swal.fire(
           'Registration Success!',
-          'Welcome',
+          'Now Login to your account!',
           'success'
         )
     this.router.navigate(['/login'])
