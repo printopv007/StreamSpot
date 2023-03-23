@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div style="margin-top: 150px;">
+<div class="container">
+    <h2 class="login-title">Suggestion Spot</h2>
+
+    <form class="login-form">
+      <div>
+        <label for="name">Name </label>
+        <input
+          id="name"
+          type="text"
+          placeholder="Enter your name..." [(ngModel)]="name"
+          name="name"
+          required
+        />
+      </div>
+
+     
+      <div>
+        <label for="password">Suggest your Series</label>
+        <input
+          id="series"
+          type="text"
+          placeholder="Enter Series Name..." [(ngModel)]="series"
+          name="series"
+          required
+        />
+      </div>
+
+      <button class="btn btn--form" type="submit" value="Submit" (click)="submit()">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

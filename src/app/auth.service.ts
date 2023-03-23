@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from '@angular/fire/auth';
-import { Firestore,collectionData, collection,addDoc } from '@angular/fire/firestore';
+import { Firestore, collection, addDoc } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 @Injectable({
@@ -9,22 +9,25 @@ import Swal from 'sweetalert2';
 export class AuthService {
  
   constructor(private auth : Auth,private router:Router ,private fstore: Firestore) { }
+ 
+ 
+ 
   addData(data:any){
-    const datacollection = collection(this.fstore, 'UserData');
+    const datacollection = collection(this.fstore, 'Suggestions');
     addDoc(datacollection, data).then(res=>{
       console.log(res); 
-      alert("Success");
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Your Suggestion has been sent successfully!',
+        showConfirmButton: false,
+        timer: 1500
+      })
     }).catch(err=>{
-      console.log(err);
+      alert(err);
     })
   }
-  getData(){
-    const datacollection = collection(this.fstore, 'UserData');
-    collectionData(datacollection).subscribe(data=>{
-      // console.log(data);
-      
-    })
-  }
+ 
 
   login(creds: any) {
     signInWithEmailAndPassword(this.auth, creds.email, creds.password)

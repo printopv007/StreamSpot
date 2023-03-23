@@ -28,6 +28,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { SignupComponent } from './signup/signup.component';
+import { SuggestionComponent } from './pages/suggestion/suggestion.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { SignupComponent } from './signup/signup.component';
     FantasyComponent,
     AnimationComponent,
     SignupComponent,
+    SuggestionComponent,
   
        
     ],
