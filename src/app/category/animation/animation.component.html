@@ -1,29 +1,36 @@
 <app-navbar></app-navbar>
-<div style="background-image: url('/assets/images/bg.jpg');  " class="container-fluid">
-    <h1 style="color: aliceblue; text-align: center;margin-top: 30px;">Top Animation Series</h1>
-    
-    <div class="row row">
-      <div class="col cols-4" *ngFor="let item of anime">
-  <br>
-        <div style="margin-left: 10px;" class="wrapper">
-          <div class="card front-face">
-            <img src="{{item.original}}" alt="Flip Card">
-       
+<div
+  style="background-image: url('/assets/images/bg.jpg')"
+  class="container-fluid"
+>
+  <h1 style="color: aliceblue; text-align: center; margin-top: 30px">
+    Top Animation Series
+  </h1>
+
+  <div class="row row">
+    <div class="col cols-4" *ngFor="let item of anime">
+      <br />
+      <div style="margin-left: 10px" class="wrapper">
+        <div class="card front-face">
+          <img src="{{ item.original }}" alt="Flip Card" />
+        </div>
+        <div class="card back-face">
+          <img src="{{ item.medium }}" alt="Flip Card" />
+          <div class="info">
+            <div class="title">{{ item.name }}</div>
+            Rating:{{ item.rating.average }}/10
+
+            <p>Language:{{ item.language }} <br />Genre:{{ item.genres }}</p>
+            Status:{{ item.status }}
           </div>
-          <div class="card back-face">
-            <img src="{{item.medium}}" alt="Flip Card">
-            <div class="info">
-              <div class="title">{{item.name}}</div>
-              Rating:{{item.rating.average}}/10
-  
-              <p>Language:{{item.language}} <br>Genre:{{item.genres}}</p>Status:{{item.status}}            
-            </div>
-            <a (click)="gotoHere(item.name)"><button type="button" class="btn btn-outline-info">See Details</button></a>.
-           
-          </div>
-          
+          <a (click)="gotoHere(item.name)"
+            ><button type="button" class="btn btn-outline-info">
+              See Details
+            </button></a
+          >.
         </div>
       </div>
-      </div>
-    </div> 
-    <app-footer></app-footer>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

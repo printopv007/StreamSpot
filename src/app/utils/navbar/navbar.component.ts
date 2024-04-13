@@ -10,9 +10,16 @@ import { database } from 'src/assets/data';
 })
 export class NavbarComponent {
   constructor(private show:ShowserviceService,private auth:AuthService){}
-data=this.show.getData();
-signout(){
-  this.auth.logout()
-}
+  data:any[]=this.show.getData();
+  Search = '';
+  sdata:any=[];
+  signout(){
+    this.auth.logout();
+  }
+  getSearchResult(){
+   this.sdata=this.data.filter((s:any) =>
+      this.Search==s.name
+      )
+  }
 
 }

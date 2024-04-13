@@ -177,3 +177,13 @@ html,body{
   background: linear-gradient(375deg, transparent, transparent);
 }
 
+nav span{
+  color:  rgb(0, 221, 255);
+}
+nav a{
+  color: rgb(0, 0, 0);
+}
+nav a:hover{
+  color: rgb(0, 221, 255);
+}
+
