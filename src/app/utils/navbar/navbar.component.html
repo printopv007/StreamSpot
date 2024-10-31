@@ -32,7 +32,7 @@
             <li><a class="dropdown-item" routerLink="/anime">Animation</a></li>
             <li><a class="dropdown-item" routerLink="/advnt">Adventure</a></li>
             <li><a class="dropdown-item" routerLink="/fantasy">Fantasy</a></li>
-          </div>        
+         </div>        
           </ul>
         </li>
         <li class="nav-item">
@@ -46,15 +46,13 @@
         <li class="nav-item">
           <a style="margin-left: 5px;" class="nav-link" routerLink="/login" (click)="signout()">Logout</a>
         </li>
-        
         </ul>
         </li>
       </ul>
       <div class="d-flex" role="search">
-        <input  class="form-control me-2" type="search"placeholder="Search....." aria-label="Search" [(ngModel)]="Search" (keyup)="getSearchResult()" name="Search" id="Search">
+        <input  class="form-control me-2" type="search"placeholder="Search....." aria-label="Search" >
       </div>
     </div>
   </div>
-  {{sdata|json}}
 </nav>
 

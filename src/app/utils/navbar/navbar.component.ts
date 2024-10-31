@@ -9,17 +9,12 @@ import { database } from 'src/assets/data';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  // workweekId = input<number>();
   constructor(private show:ShowserviceService,private auth:AuthService){}
   data:any[]=this.show.getData();
-  Search = '';
-  sdata:any=[];
   signout(){
     this.auth.logout();
   }
-  getSearchResult(){
-   this.sdata=this.data.filter((s:any) =>
-      this.Search==s.name
-      )
-  }
+
 
 }

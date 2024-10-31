@@ -6,10 +6,10 @@ import { database } from 'src/assets/data';
 export class ShowserviceService {
   constructor() {}
   getData(){
-    return database
+    return database;
      } 
   getSingle(id:any){
-    return database[id]
+    return database[id];
   }
  
  
