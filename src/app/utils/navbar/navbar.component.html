@@ -20,18 +20,10 @@
           </a>
           <ul class="dropdown-menu dropdown-menu">
             <div >
-            <li><a class="dropdown-item" routerLink="/comedy">Comedy</a></li>
-            <li><a class="dropdown-item" routerLink="/scifi">Sci-Fi</a></li>
-            <li><a class="dropdown-item" routerLink="/horror">Horror</a></li>
-            <li><a class="dropdown-item" routerLink="/romance">Romance</a></li>
-            <li><a class="dropdown-item" routerLink="/action">Action</a></li>
-            <li><a class="dropdown-item" routerLink="/thrill">Thriller</a></li>
-            <li><a class="dropdown-item" routerLink="/drama">Drama</a></li>
-            <li><a class="dropdown-item" routerLink="/mystery">Mystery</a></li>
-            <li><a class="dropdown-item" routerLink="/crime">Crime</a></li>
-            <li><a class="dropdown-item" routerLink="/anime">Animation</a></li>
-            <li><a class="dropdown-item" routerLink="/advnt">Adventure</a></li>
-            <li><a class="dropdown-item" routerLink="/fantasy">Fantasy</a></li>
+             
+                <li *ngFor="let item of navData"><a class="dropdown-item" [routerLink]="item.url">{{item.name}}</a></li>
+              
+           
          </div>        
           </ul>
         </li>
